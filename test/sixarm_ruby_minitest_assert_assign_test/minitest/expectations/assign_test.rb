@@ -22,7 +22,7 @@ describe "Minitest" do
           err = proc { 
             expect(:a).must_assign :B
           }.must_raise MiniTest::Assertion
-          err.message.must_match(/\bto equal\b/)
+          err.message.must_match(/\bExpected equal\b/)
         end
 
       end
@@ -78,7 +78,7 @@ describe "Minitest" do
           err = proc { 
             expect(:a).wont_assign(:A)
           }.must_raise MiniTest::Assertion
-          err.message.must_match(/\bto not equal\b/)
+          err.message.must_match(/\bExpected not equal\b/)
         end
 
       end
