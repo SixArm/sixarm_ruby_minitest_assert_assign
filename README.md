@@ -6,7 +6,7 @@
 
 [![Gem Version](https://badge.fury.io/rb/sixarm_ruby_minitest_assert_assign.svg)](http://badge.fury.io/rb/sixarm_ruby_minitest_assert_assign)
 [![Build Status](https://travis-ci.org/SixArm/sixarm_ruby_minitest_assert_assign.png)](https://travis-ci.org/SixArm/sixarm_ruby_minitest_assert_assign)
-[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/$id/maintainability)](https://codeclimate.com/github/SixArm/$dir/maintainability)
+[![Code Climate Maintainability](https://api.codeclimate.com/v1/badges/f46781e39020a045cb4b/maintainability)](https://codeclimate.com/github/SixArm/sixarm_ruby_minitest_assert_assign/maintainability)
 [![Coverage Status](https://coveralls.io/repos/SixArm/sixarm_ruby_minitest_assert_assign/badge.svg?branch=master&service=github)](https://coveralls.io/github/SixArm/sixarm_ruby_minitest_assert_assign?branch=master)
 
 * Git: <https://github.com/sixarm/sixarm_ruby_minitest_assert_assign>
