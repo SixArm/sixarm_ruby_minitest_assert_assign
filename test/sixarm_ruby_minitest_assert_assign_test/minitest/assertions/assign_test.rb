@@ -19,10 +19,14 @@ describe "Minitest" do
         end
 
         specify "invalid" do
-          err = proc { 
+          expect {
             assert_assign(:B, :a)
           }.must_raise MiniTest::Assertion
-          err.message.must_match(/\bExpected equal\b/)
+          begin
+            assert_assign(:B, :a)
+          rescue MiniTest::Assertion => err
+            expect(err.message).must_match(/\bExpected equal\b/)
+          end
         end
 
       end
@@ -32,10 +36,14 @@ describe "Minitest" do
         describe "with `expect_value` nil" do
 
           specify "raise" do
-            err = proc {
+            expect {
               assert_assign(nil, :a)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected expect_value, but got nil\b/)
+            begin
+              assert_assign(nil, :a)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected expect_value, but got nil\b/)
+            end
           end
 
         end
@@ -43,10 +51,14 @@ describe "Minitest" do
         describe "with `assign_symbol` nil" do
 
           specify "raise" do
-            err = proc {
+            expect {
               assert_assign(:A, nil)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected assign_symbol, but got nil\b/)
+            begin
+              assert_assign(:A, nil)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected assign_symbol, but got nil\b/)
+            end
           end
 
         end
@@ -54,10 +66,14 @@ describe "Minitest" do
         describe "with a `assign_symbol` that isn't set" do
 
           specify "raise" do
-            err = proc {
+            expect {
               assert_assign(:A, :z)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected assigns\(:z\), but got nil\b/)
+            begin
+              assert_assign(:A, :z)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected assigns\(:z\), but got nil\b/)
+            end
           end
 
         end
@@ -75,10 +91,14 @@ describe "Minitest" do
         end
 
         specify "invalid" do
-          err = proc { 
+          expect { 
             refute_assign(:A, :a)
           }.must_raise MiniTest::Assertion
-          err.message.must_match(/\bExpected not equal\b/)
+          begin
+            refute_assign(:A, :a)
+          rescue MiniTest::Assertion => err
+            expect(err.message).must_match(/\bExpected not equal\b/)
+          end
         end
 
       end
@@ -88,10 +108,14 @@ describe "Minitest" do
         describe "with `expect_value` nil" do
 
           specify "raise" do
-            err = proc {
+            expect {
               refute_assign(nil, :a)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected expect_value, but got nil\b/)
+            begin
+              refute_assign(nil, :a)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected expect_value, but got nil\b/)
+            end
           end
 
         end
@@ -99,10 +123,14 @@ describe "Minitest" do
         describe "with `assign_symbol` nil" do
 
           specify "raise" do
-            err = proc {
+            expect {
               refute_assign(:A, nil)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected assign_symbol, but got nil\b/)
+            begin
+              refute_assign(:A, nil)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected assign_symbol, but got nil\b/)
+            end
           end
 
         end
@@ -110,10 +138,14 @@ describe "Minitest" do
         describe "with a `assign_symbol` that isn't set" do
 
           specify "raise" do
-            err = proc {
+            expect {
               refute_assign(:A, :z)
             }.must_raise MiniTest::Assertion
-            err.message.must_match(/\bExpected assigns\(:z\), but got nil\b/)
+            begin
+              refute_assign(:A, :z)
+            rescue MiniTest::Assertion => err
+              expect(err.message).must_match(/\bExpected assigns\(:z\), but got nil\b/)
+            end
           end
 
         end

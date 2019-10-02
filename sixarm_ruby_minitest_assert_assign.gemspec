@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.name           = "sixarm_ruby_minitest_assert_assign"
   s.summary        = "SixArm.com → Ruby → Minitest → assert_assign assert & expect"
   s.description    = "A Minitest assertion & expectation to compare the assigns(:symbol) method, which is typical of Rails controllers"
-  s.version        = "1.0.0"
+  s.version        = "2.0.0"
 
   s.author         = "SixArm"
   s.email          = "sixarm@sixarm.com"
@@ -32,13 +32,13 @@ Gem::Specification.new do |s|
     "test/sixarm_ruby_minitest_assert_assign_test/minitest/expectations/assign_test.rb",
   ]
 
-  s.add_dependency('hashdiff', '>= 0.3.7', '< 2')
-  s.add_development_dependency('rake', '>= 12.2.1', '< 13')
+  s.add_dependency("hashdiff", ">= 1.0.0", "< 2");
+  s.add_development_dependency("rake", ">= 13.0.0", "< 14");
 
-  s.add_development_dependency('minitest', '>= 5.10.3', '< 6')
-  s.add_development_dependency('yard', '>= 0.9.9', '< 2')
-  s.add_development_dependency('simplecov', '>= 0.14.1', '< 2')
+  s.add_development_dependency("minitest", ">= 5.12.2", "< 6");
+  s.add_development_dependency("yard", ">= 0.9.20", "< 2");
+  s.add_development_dependency("simplecov", ">= 0.17.1", "< 2");
 
-  s.required_ruby_version = ">= 2.2"
+  s.required_ruby_version = ">= 2.5"
 
 end

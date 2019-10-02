@@ -1,1 +1,0 @@
-da9e913f4dee9e11c4f644bd8e0b9e552d2c9f2fb44963a731fa29f8ea19147c2b8de77597788eedb0f3f86144c13ec6b1b0b71bc712b692eea60963a6ec19cb  sixarm_ruby_minitest_assert_assign-1.0.0.gem
