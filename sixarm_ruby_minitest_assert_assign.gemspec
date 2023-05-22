@@ -33,7 +33,7 @@ Gem::Specification.new do |s|
   ]
 
   s.add_dependency("hashdiff", ">= 1.0.0", "< 2");
-  s.add_development_dependency("rake", ">= 13.0.0", "< 14");
+  s.add_development_dependency("rake", ">= 12.3.3", "< 13")
 
   s.add_development_dependency("minitest", ">= 5.12.2", "< 6");
   s.add_development_dependency("yard", ">= 0.9.20", "< 2");
